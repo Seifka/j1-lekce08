@@ -156,7 +156,7 @@ public class Svatky {
     public Stream<String> jmenaOdVanoc() {
         //TODO
         return seznamSvatku().filter(svatek -> svatek.getDen().getMonthValue() == 12)
-                .filter(svatek -> svatek.getDen().getDayOfMonth() == 24)
+                .filter(svatek -> svatek.getDen().getDayOfMonth() >= 24)
                 .map(svatek -> svatek.getJmeno());
     }
 }
